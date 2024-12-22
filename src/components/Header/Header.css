@@ -1,0 +1,94 @@
+/* Header.css */
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 10; /* Ensure Header is above other elements */
+}
+
+.logo {
+    margin: 20px;
+    height: 3rem;
+    width: 4rem;
+}
+
+.header-menu {
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu > li {
+    cursor: pointer;
+}
+
+.header-menu > li:hover {
+    color: #f48915;
+}
+
+.search {
+    margin: 20px;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Header {
+        position: relative;
+    }
+
+    .header-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #333;
+        z-index: 1000; /* Ensure menu is above all other sections */
+    }
+
+    .header-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin: 20px;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        z-index: 1010; /* Bars icon should also be on top */
+    }
+
+    .search {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        margin: 10px;
+        height: 2.5rem;
+        width: 3.5rem;
+    }
+
+    .menu-toggle {
+        margin: 10px;
+    }
+}

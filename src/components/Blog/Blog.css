@@ -1,0 +1,180 @@
+.blog {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.b-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.b-left span:first-child {
+  font-size: 18px;
+  color: gray;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.b-left span:last-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  line-height: 2.5rem;
+}
+
+.b-main {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Makes it horizontally scrollable on small screens */
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Hides the scrollbar */
+  scrollbar-color: gray transparent;
+}
+
+.b-content {
+  flex: 0 0 auto; /* Prevents b-content from shrinking or growing */
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.b-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.b-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ensures images are contained without distortion */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.b-content:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.inner-content {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.inner-content .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.inner-content .role {
+  font-size: 1rem;
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+
+/* Large Screens (1200px and below) */
+@media (max-width: 1200px) {
+  .b-head {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .b-left span:last-child {
+    font-size: 1.8rem;
+  }
+
+  .b-main {
+    gap: 20px;
+  }
+
+  .b-content {
+    width: 270px;
+  }
+
+  .b-content img {
+    height: 280px;
+  }
+}
+
+/* Medium Screens (768px and below) */
+@media (max-width: 768px) {
+  .b-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .b-left span:last-child {
+    font-size: 1.5rem;
+  }
+
+  .b-main {
+    gap: 15px;
+  }
+
+  .b-content {
+    width: 250px;
+  }
+
+  .b-content img {
+    height: 250px;
+  }
+}
+
+/* Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .b-head {
+    padding: 0 10px;
+  }
+
+  .b-left span:first-child {
+    font-size: 16px;
+  }
+
+  .b-left span:last-child {
+    font-size: 1.2rem;
+  }
+
+  .b-main {
+    gap: 10px;
+  }
+
+  /* Enable horizontal scrolling on small screens */
+  .b-main {
+    display: block; /* Revert flex layout for horizontal scroll */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Horizontal scroll */
+  }
+
+  .b-content {
+    display: inline-block;
+    width: 200px; /* Decrease width for smaller devices */
+    margin-right: 10px; /* Add some space between items */
+  }
+
+  .b-content img {
+    height: 220px; /* Adjust image height for small screens */
+  }
+
+  .inner-content .name {
+    font-size: 1rem;
+  }
+
+  .inner-content .role {
+    font-size: 0.9rem;
+  }
+}
