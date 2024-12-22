@@ -1,0 +1,219 @@
+.Testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.t-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.t-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.text-stroke1 {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+  color: transparent;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.t-content span:last-child {
+  font-size: 1.2rem;
+  color: white;
+  text-align: left;
+}
+
+.t-main {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+  gap: 2rem; /* Add gap between left and right content */
+}
+
+.t-left,
+.t-right {
+  width: 40%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.t-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.t-left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.t-left .t-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+}
+
+.t-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem; /* Add spacing below the name */
+}
+
+.t-role {
+  font-size: 1rem;
+  color: #f48915;
+}
+
+.t-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 600px;
+}
+
+.t-right p {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.arrow img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow img:hover {
+  transform: scale(1.1);
+}
+
+.t-divider {
+  width: 1px;
+  background-color: #ddd;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive Design */
+
+/* For medium and small screens (768px and below) */
+@media screen and (max-width: 768px) {
+  .t-head {
+    flex-direction: column; /* Switch to column layout on smaller screens */
+    gap: 1rem; /* Add gap between items */
+    text-align: left;
+  }
+
+  .t-main {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem; /* Reduce the gap between left and right sections */
+  }
+
+  .t-left,
+  .t-right {
+    width: 100%;
+  }
+
+  .t-divider {
+    display: none; /* Hide the divider on small screens */
+  }
+
+  .t-left img {
+    width: 80px; /* Reduce the image size on smaller screens */
+    height: 80px;
+  }
+
+  .t-name {
+    font-size: 1.3rem; /* Adjust font size for smaller screens */
+  }
+
+  .t-role {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .t-right p {
+    font-size: 1rem; /* Adjust paragraph text size */
+  }
+
+  .arrow img {
+    width: 25px;
+    height: 25px; /* Reduce arrow icon size */
+  }
+}
+
+/* For very small screens (480px and below) */
+@media screen and (max-width: 480px) {
+  .Testimonials {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .t-head {
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .text-stroke1 {
+    font-size: 4rem; /* Reduce font size of the stroke text */
+  }
+
+  .t-content span:last-child {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+  }
+
+  .t-main {
+    padding: 0; /* Remove unnecessary padding */
+    gap: 1rem;
+  }
+
+  .t-left img {
+    width: 70px; /* Further reduce image size */
+    height: 70px;
+  }
+
+  .t-name {
+    font-size: 1.2rem;
+  }
+
+  .t-role {
+    font-size: 0.85rem;
+  }
+
+  .t-right p {
+    font-size: 0.95rem;
+  }
+
+  .arrow img {
+    width: 20px; /* Further reduce arrow icon size */
+    height: 20px;
+  }
+}

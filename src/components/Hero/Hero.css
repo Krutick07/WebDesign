@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background-image: url('../../assets/Hero2.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.hero .header {
+  position: relative;
+  z-index: 1; 
+}
+
+.hero-img {
+  display: none; 
+}
+
+.h-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers spans for smaller screens */
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* White text color */
+  font-family: 'Arial', sans-serif; /* Set a clean font */
+  text-align: center; /* Center align for smaller screens */
+}
+
+.h-text span {
+  font-size: 5rem; /* Adjust the font size of spans */
+  margin-bottom: 10px; /* Spacing between spans */
+}
+
+.h-text span:nth-of-type(2) {
+  display: flex;
+  flex-direction: column; /* Stack text and paragraph on smaller screens */
+  align-items: center;
+  position: relative;
+}
+
+.h-text p {
+  font-size: 0.8rem; /* Slightly larger font for better readability */
+  margin-top: 15px; /* Space above the paragraph */
+  width: 280px; /* Limit the paragraph width */
+  line-height: 1.6; /* Improves readability */
+  text-align: center; /* Center align for smaller screens */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .h-text span {
+      font-size: 3.5rem; /* Reduce font size for tablets */
+  }
+
+  .h-text p {
+      font-size: 0.7rem;
+      width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h-text {
+      align-items: center; /* Aligns text centrally for smaller screens */
+  }
+
+  .h-text span {
+      font-size: 3rem; /* Adjust font size for smaller devices */
+  }
+
+  .h-text p {
+      font-size: 0.6rem; /* Smaller font for mobile devices */
+      width: 200px; /* Reduce paragraph width */
+  }
+}
+
+@media (max-width: 480px) {
+  .h-text span {
+      font-size: 2.5rem; /* Smaller font size for extra small screens */
+  }
+
+  .h-text p {
+      font-size: 0.5rem; /* Further reduce font size */
+      width: 180px;
+  }
+}
